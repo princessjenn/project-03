@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Classic Haircut",
+      "description": "A timeless haircut that includes precise scissor work and styling to achieve a clean and polished look.",
+      "price": 25.99
+    },
+    {
+      "name": "Beard Trim and Shaping",
+      "description": "Professional trimming and shaping of the beard to create a well-groomed appearance.",
+      "price": 15.99
+    },
+    {
+      "name": "Straight Razor Shave",
+      "description": "A luxurious and traditional shave experience using a straight razor for an incredibly close and smooth shave.",
+      "price": 19.99
+    },
+    {
+      "name": "Skin Fade",
+      "description": "A haircut technique that involves a gradual transition from longer hair on top to shorter hair on the sides, creating a clean look.",
+      "price": 22.99
+    },
+    {
+      "name": "Hot Towel Facial",
+      "description": "A rejuvenating facial treatment that includes a series of hot towel applications, gentle exfoliation, and moisturizing to refresh the skin.",
+      "price": 29.99
+    },
+    {
+      "name": "The Smooth Operator",
+      "description": "Indulge in the ultimate head shaving experience, achieving a perfectly smooth and polished bald look.",
+      "price": 17.99
+    },
+    {
+      "name": "Facial Mask Application",
+      "description": "Add-on service: Application of a facial mask to improve skin health and appearance.",
+      "price": 7.99
+    },
+    {
+      "name": "Beard Conditioning",
+      "description": "Add-on service: Conditioning treatment for the beard to keep it soft and healthy.",
+      "price": 4.99
+    },
+    {
+      "name": "Relaxing Scalp Massage",
+      "description": "Add-on service: Soothing scalp massage to relieve stress and promote relaxation.",
+      "price": 9.99
+    }
+  ]

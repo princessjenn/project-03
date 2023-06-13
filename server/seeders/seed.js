@@ -1,31 +1,55 @@
 const db = require('../config/connection');
-const { User, Thought } = require('../models');
+const { User, Barber, Specialty, Appointment } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const barberSeeds = require('./barberSeeds.json');
+const specialtySeeds = require('./specialtySeeds.json');
+const appointmentSeeds = require('./appointmentSeeds.json');
 
 db.once('open', async () => {
   try {
-    await Thought.deleteMany({});
+    await Appointment.deleteMany({});
+    await Specialty.deleteMany({});
+    await Barber.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    const createdUsers = await User.create(userSeeds);
+    const createdSpecialties = await Specialty.create(specialtySeeds);
+    const createdBarbers = await Barber.create(barberSeeds);
 
-    for (let i = 0; i < thoughtSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
-        {
-          $addToSet: {
-            thoughts: _id,
-          },
-        }
-      );
+    for (let i = 0; i < appointmentSeeds.length; i++) {
+      const {
+        id,
+        userId,
+        userName,
+        barberId,
+        barberName,
+        specialty,
+        date,
+        time,
+      } = appointmentSeeds[i];
+
+      const user = createdUsers.find((user) => user.id === userId);
+      const barber = createdBarbers.find((barber) => barber.userId === barberId);
+      const specialtyObj = createdSpecialties.find((spec) => spec.name === specialty);
+
+      if (user && barber && specialtyObj) {
+        await Appointment.create({
+          id,
+          user: user._id,
+          userName,
+          barber: barber._id,
+          barberName,
+          specialty: specialtyObj._id,
+          date,
+          time,
+        });
+      }
     }
   } catch (err) {
     console.error(err);
     process.exit(1);
   }
 
-  console.log('all done!');
+  console.log('Seed data inserted successfully!');
   process.exit(0);
 });

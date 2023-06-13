@@ -1,52 +1,58 @@
 [
   {
-    "username": "Brian Kernighan",
-    "email": "bkernighan@techfriends.dev",
-    "password": "password01"
+      "id": "1",
+      "name": "Anthony Banks",
+      "email": "anthonybrown@example.com",
+      "password": "",
+      "isAdmin": true
+    },
+    {
+      "id": "2",
+      "name": "David Smith",
+      "email": "davidsmith@example.com",
+      "password": "",
+      "isAdmin": true
+    },
+  {   
+    "id": "3",
+    "name": "James Miller",
+    "email": "jamesmiller@example.com",
+    "password": "",
+    "isAdmin": false
   },
   {
-    "username": "Max Kanat-Alexander",
-    "email": "mkanatalexander@techfriends.dev",
-    "password": "password02"
+    "id": "4",
+    "name": "Benjamin Davis",
+    "email": "benjamindavis@example.com",
+    "password": "",
+    "isAdmin": false
   },
   {
-    "username": "Why The Lucky Stiff",
-    "email": "wtls@techfriends.dev",
-    "password": "password03"
+    "id": "5",
+    "name": "Daniel Thompson",
+    "email": "danielthompson@example.com",
+    "password": "",
+    "isAdmin": false
   },
   {
-    "username": "Kent Beck",
-    "email": "kbeck@techfriends.dev",
-    "password": "password04"
+    "id": "6",
+    "name": "Christopher Wilson",
+    "email": "christopherwilson@example.com",
+    "password": "",
+    "isAdmin": false
   },
   {
-    "username": "Edward V. Berard",
-    "email": "evberard@techfriends.dev",
-    "password": "password05"
+    "id": "7",
+    "name": "Dane Edwards",
+    "email": "daneedwards@example.com",
+    "password": "",
+    "isAdmin": false
   },
   {
-    "username": "Alan Kay",
-    "email": "akay@techfriends.dev",
-    "password": "password06"
-  },
-  {
-    "username": "C.A.R. Hoare",
-    "email": "choare@techfriends.dev",
-    "password": "password07"
-  },
-  {
-    "username": "David Thomas",
-    "email": "dthomas@techfriends.dev",
-    "password": "password08"
-  },
-  {
-    "username": "Donald Knuth",
-    "email": "dknuth@techfriends.dev",
-    "password": "password09"
-  },
-  {
-    "username": "Lernantino",
-    "email": "lernantino@techfriends.dev",
-    "password": "password10"
+    "id": "8",
+    "name": "Andrew Layendecker",
+    "email": "andrewlayendecker@example.com",
+    "password": "",
+    "isAdmin": false
   }
 ]
