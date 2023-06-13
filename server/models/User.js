@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
-  username: {
+  name: {
     type: String,
     required: true,
     unique: true,
@@ -19,10 +19,14 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  thoughts: [
+  isAdmin: {
+    type: Boolean,
+    required: true,
+  },
+  appointments: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Thought',
+      ref: 'Appointment',
     },
   ],
 });

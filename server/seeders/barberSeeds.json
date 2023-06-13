@@ -1,0 +1,56 @@
+[
+    {
+      "userId": "1",
+      "name": "Anthony Banks",
+      "specialties": ["Classic Haircut", "Beard Trim and Shaping"],
+      "availability": [
+        {
+          "day": "Monday",
+          "startTime": "9:00 AM",
+          "endTime": "05:00 PM"
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "09:00 AM",
+          "endTime": "05:00 PM"
+        },
+        {
+          "day": "Friday",
+          "startTime": "09:00 AM",
+          "endTime": "05:00 PM"
+        },
+        {
+          "day": "Saturday",
+          "startTime": "09:00 AM",
+          "endTime": "01:00 PM"
+        }
+      ]
+    },
+    {
+      "userId": "2",
+      "name": "David Smith",
+      "specialties": ["Straight Razor Shave", "Skin Fade"],
+      "availability": [
+        {
+          "day": "Tuesday",
+          "startTime": "01:00 PM",
+          "endTime": "09:00 PM"
+        },
+        {
+          "day": "Thursday",
+          "startTime": "01:00 PM",
+          "endTime": "09:00 PM"
+        },
+        {
+          "day": "Friday",
+          "startTime": "05:00 PM",
+          "endTime": "09:00 PM"
+        },
+        {
+          "day": "Saturday",
+          "startTime": "01:00 PM",
+          "endTime": "06:00 PM"
+        }
+      ]
+    }
+  ]
