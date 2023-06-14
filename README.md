@@ -1,16 +1,27 @@
 # The Fade Brigade
 
-## Description
+> Project Repository:
+>    https://github.com/princessjenn/project-03
+>
+> Deployed HEROKU application:
+>    https://fade-brigade.herokuapp.com/
 
-### User Story:
+## *Description*
 
-```AS a user of The Fade Brigade Barber Shop application,
+A scalable, collaborative, user-focused MERN-stack single-page barbershop application. Building this project we combined a MongoDB back end, a GraphQL API, an Express.js/ Node.js server with a React front end, while implementing user authentication with JWT to build a user-focused platform.
+
+**User Story:**
+
+<code>
+AS a user of The Fade Brigade Barber Shop application,
 
 I WANT to be able to browse available barbers, book appointments for specific services, manage my profile information, and make payments securely.
-```
+</code>
 
 ### Acceptance Criteria:
-```AS a user with non-admin privileges,
+
+<code>
+AS a user with non-admin privileges,
 
 I WANT to be able to create an account and log in to access the application's features.
 
@@ -93,4 +104,48 @@ THEN I can set my availability hours and specific days or time slots for appoint
 WHEN I want to offer a new specialty skill or want to discontinue offering one,
 
 THEN I have the ability to manage the list of available specialties by adding, editing, or removing specialties as needed.
-```
+
+</code>
+
+## *Table of Contents*
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+
+
+## *Installation*
+
+## *License* [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the terms of the MIT license.
+
+
+## *Contributing*
+
+To contribute to the project: 
+
+1. Start by forking the repository and creating a new branch specifically for your new feature or bug fix.
+2. It's important to adhere to the project's coding standards and properly format your code.
+3. When committing changes, be sure to write clear and concise messages that describe the changes made.
+4. If your contribution affects the user interface or experience, include screenshots or animated GIFs in your pull request to help reviewers understand the changes. 
+5. Additionally, make sure your code is thoroughly tested and all existing tests pass before submitting the pull request.
+6. Finally, provide a detailed description of your changes and explain why they're necessary.
+
+Thanks for contributing! 
+
+## *Testing*
+
+
+## *Questions?*
+
+Visit the collaborators on our personal Github repositories:
+
+Jennifer's [github profile](https://github.com/princessjenn) |
+Thomas' [github profile](https://github.com/TJGit11) |
+Benjamin's [github profile](https://github.com/Bengiwildcat)
+
+
