@@ -1,55 +1,76 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+  type Availability {
+    date: String
+    startTime: String
+    endTime: String
+  }
+
   type User {
-    _id: Int!
+    _id: ID
     username: String
     email: String
     password: String
+    isAdmin: Boolean
+    appointments: [Appointment]
+    specialties: [Specialty]
+    availability: [Availability]
   }
 
   type Barber {
-    _id: Int!
+    _id: ID
     name: String
     specialties: String
     availability: [String]
   }
 
   type Specialty {
+    _id: ID
     name: String
     description: String
-    price: INT
+    price: Int
   }
 
   type Appointment {
-    id: Int!
+    _id: ID
     userId: Int!
     username: String!
     barberId: Int!
     barberName: String
     specialty: String!
-    date: Date!
+    date: String!
     time: String!
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
   type Query {
     users: [User]
-    user(username: String!): User
-    thoughts(username: String): [Thought]
-    thought(thoughtId: ID!): Thought
+    user(userName: String!): User
+    appointment(appointmentId: ID!): Appointment
+    appointments(appointmentId: ID!): [Appointment]
     me: User
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(
+      name: String!
+      username: String!
+      email: String!
+      password: String!
+      isAdmin: Boolean!
+    ): Auth
     login(email: String!, password: String!): Auth
-    addAppointment(username: String!, barberName: String!, time: String!): Appointment
-    deleteAppointment(appointmentId: ID!): Appointment
+    addAppointment(
+      username: String!
+      barberName: String!
+      time: String!
+    ): Appointment
+    removeAppointment(appointmentId: ID!): Appointment
   }
 `;
 

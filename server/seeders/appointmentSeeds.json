@@ -2,7 +2,7 @@
     {
       "id": "1",
       "userId": "3",
-      "userName": "James Miller",
+      "username": "James Miller",
       "barberId": "1",
       "barberName": "Anthony Banks",
       "specialty": "Classic Haircut",
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "userId": "4",
-      "userName": "Benjamin Davis",
+      "username": "Benjamin Davis",
       "barberId": "2",
       "barberName": "David Smith",
       "specialty": "Straight Razor Shave",
@@ -22,7 +22,7 @@
     {
       "id": "3",
       "userId": "5",
-      "userName": "Daniel Thompson",
+      "username": "Daniel Thompson",
       "barberId": "1",
       "barberName": "Anthony Banks",
       "specialty": "Beard Trim and Shaping",
@@ -32,7 +32,7 @@
     {
       "id": "4",
       "userId": "6",
-      "userName": "Christopher Wilson",
+      "username": "Christopher Wilson",
       "barberId": "2",
       "barberName": "David Smith",
       "specialty": "Skin Fade",
@@ -42,7 +42,7 @@
     {
       "id": "5",
       "userId": "7",
-      "userName": "Dane Edwards",
+      "username": "Dane Edwards",
       "barberId": "1",
       "barberName": "Anthony Banks",
       "specialty": "The Smooth Operator",
@@ -52,7 +52,7 @@
     {
       "id": "6",
       "userId": "8",
-      "userName": "Andrew Layendecker",
+      "username": "Andrew Layendecker",
       "barberId": "2",
       "barberName": "David Smith",
       "specialty": "Classic Haircut",

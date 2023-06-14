@@ -8,6 +8,12 @@ const userSchema = new Schema({
     unique: false,
     trim: true,
   },
+  username: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: true,
+  },
   email: {
     type: String,
     required: true,
@@ -22,11 +28,25 @@ const userSchema = new Schema({
   isAdmin: {
     type: Boolean,
     required: true,
+    default: false,
   },
   appointments: [
     {
       type: Schema.Types.ObjectId,
       ref: "Appointment",
+    },
+  ],
+  // specialties: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: "Specialty",
+  //   },
+  // ],
+  availability: [
+    {
+      date: { type: String },
+      startTime: { type: String },
+      endTime: { type: String },
     },
   ],
 });

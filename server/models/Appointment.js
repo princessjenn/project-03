@@ -1,12 +1,8 @@
 const { Schema, model } = require("mongoose");
 
 const appointmentSchema = new Schema({
-  id: {
-    type: Number,
-    required: true,
-  },
   userId: {
-    type: String,
+    type: Schema.Types.ObjectId,
     required: true,
     unique: true,
   },
@@ -16,7 +12,7 @@ const appointmentSchema = new Schema({
     unique: true,
   },
   barberId: {
-    type: Number,
+    type: Schema.Types.ObjectId,
     required: true,
     unique: true,
   },
@@ -30,7 +26,7 @@ const appointmentSchema = new Schema({
     required: true,
   },
   date: {
-    type: Date,
+    type: String,
     required: true,
   },
   time: {
