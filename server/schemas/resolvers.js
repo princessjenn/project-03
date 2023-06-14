@@ -19,7 +19,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id }).populate("appointments");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -60,24 +60,48 @@ const resolvers = {
       context
     ) => {
       if (context.user) {
-        const appointment = await Appointment.create({
+        console.log(context.user)
+        let newAppt = {
+          userId: context.user._id,
+          username: context.user.username,
           barberName,
           specialty,
           date,
           time,
-          specialty: context.user.username,
-        });
+        }
+        console.log(newAppt)
 
-        await User.findOneAndUpdate(
+        const appointment = await Appointment.create(newAppt);
+        let userUpdate = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { appointment: appointment._id } }
+          { $addToSet: { appointments: appointment._id } }
         );
-
+        console.log("userUpdate: " + userUpdate)
         return appointment;
+
+        // console.log(appointment)
+
       }
       throw new AuthenticationError("You need to be logged in!");
     },
     removeAppointment: async (parent, { appointmentId }, context) => {
+
+      if (context.user.isAdmin) {
+        console.log("should be an admin")
+        const appointment = await Appointment.findOneAndDelete({
+          _id: appointmentId,
+          // barberName: context.user.username,
+        });
+        console.log(appointment)
+        await User.findOneAndUpdate(
+          { username: appointment.username },
+          { $pull: { appointments: appointment._id } }
+        );
+        return appointment;
+
+      }
+
+      // a user can only have 1 appt booked at a time so it makes sense to just remove 1 appt
       if (context.user) {
         const appointment = await Appointment.findOneAndDelete({
           userId: context.user._id,
@@ -86,7 +110,7 @@ const resolvers = {
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { appointment: appointment._id } }
+          { $pull: { appointments: appointment._id } }
         );
 
         return appointment;
