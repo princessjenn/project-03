@@ -2,7 +2,6 @@
     {
       "userId": "1",
       "name": "Anthony Banks",
-      "specialties": ["Classic Haircut", "Beard Trim and Shaping"],
       "availability": [
         {
           "day": "Monday",
@@ -29,7 +28,6 @@
     {
       "userId": "2",
       "name": "David Smith",
-      "specialties": ["Straight Razor Shave", "Skin Fade"],
       "availability": [
         {
           "day": "Tuesday",
