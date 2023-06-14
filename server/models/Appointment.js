@@ -4,22 +4,18 @@ const appointmentSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     required: true,
-    unique: true,
   },
   username: {
     type: String,
     required: true,
-    unique: true,
   },
-  barberId: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    unique: true,
-  },
+  // // barberId: {
+  // //   type: Schema.Types.ObjectId,
+  // //   required: true,
+  // },
   barberName: {
     type: String,
     required: true,
-    unique: true,
   },
   specialty: {
     type: String,
@@ -30,9 +26,9 @@ const appointmentSchema = new Schema({
     required: true,
   },
   time: {
-    type: Number,
+    type: String,
     required: true,
-    unique: true,
+    // unique: true,
   },
 });
 
