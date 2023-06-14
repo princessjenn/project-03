@@ -93,6 +93,19 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
+    // addSpecialty: async (parent, { }, context) => {
+    //   if (context.user) {
+    //     const specialty =
+    //       let user = await user.findOneAndUpdate(
+    //         { _id: context.user._id },
+    //         {
+    //           $addToSet: {}
+    //         });
+    //     console.log(user);
+    //     return user;
+    //   } throw new AuthenticationError("You need to be logged in!");
+    // },
+
     removeAppointment: async (parent, { appointmentId }, context) => {
       if (context.user) {
         const appointment = await Appointment.findOneAndDelete({
