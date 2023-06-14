@@ -3,56 +3,56 @@
       "id": "1",
       "name": "Anthony Banks",
       "email": "anthonybrown@example.com",
-      "password": "",
+      "password": "anthony1",
       "isAdmin": true
     },
     {
       "id": "2",
       "name": "David Smith",
       "email": "davidsmith@example.com",
-      "password": "",
+      "password": "david1",
       "isAdmin": true
     },
   {   
     "id": "3",
     "name": "James Miller",
     "email": "jamesmiller@example.com",
-    "password": "",
+    "password": "james1",
     "isAdmin": false
   },
   {
     "id": "4",
     "name": "Benjamin Davis",
     "email": "benjamindavis@example.com",
-    "password": "",
+    "password": "benjamin1",
     "isAdmin": false
   },
   {
     "id": "5",
     "name": "Daniel Thompson",
     "email": "danielthompson@example.com",
-    "password": "",
+    "password": "daniel1",
     "isAdmin": false
   },
   {
     "id": "6",
     "name": "Christopher Wilson",
     "email": "christopherwilson@example.com",
-    "password": "",
+    "password": "christopher1",
     "isAdmin": false
   },
   {
     "id": "7",
-    "name": "Dane Edwards",
-    "email": "daneedwards@example.com",
-    "password": "",
+    "name": "Michael Jones",
+    "email": "mikejones@example.com",
+    "password": "michael1",
     "isAdmin": false
   },
   {
     "id": "8",
-    "name": "Andrew Layendecker",
-    "email": "andrewlayendecker@example.com",
-    "password": "",
+    "name": "Larry Fisherman",
+    "email": "larryfisherman@example.com",
+    "password": "larry1",
     "isAdmin": false
   }
 ]
