@@ -33,9 +33,9 @@ const typeDefs = gql`
 
   type Appointment {
     _id: ID
-    userId: Int!
+    userId: ID
     username: String!
-    barberId: Int!
+    barberId: ID
     barberName: String
     specialty: String!
     date: String!
@@ -51,7 +51,7 @@ const typeDefs = gql`
     users: [User]
     user(userName: String!): User
     appointment(appointmentId: ID!): Appointment
-    appointments(appointmentId: ID!): [Appointment]
+    appointments(appointmentId: ID): [Appointment]
     me: User
   }
 
@@ -65,8 +65,9 @@ const typeDefs = gql`
     ): Auth
     login(email: String!, password: String!): Auth
     addAppointment(
-      username: String!
       barberName: String!
+      specialty: String!
+      date: String!
       time: String!
     ): Appointment
     addAvailability(date: String!, time: String!): User
