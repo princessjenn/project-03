@@ -3,8 +3,7 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type Availability {
     date: String
-    startTime: String
-    endTime: String
+    time: String
   }
 
   type User {
@@ -70,6 +69,7 @@ const typeDefs = gql`
       barberName: String!
       time: String!
     ): Appointment
+    addAvailability(date: String!, time: String!): User
     removeAppointment(appointmentId: ID!): Appointment
   }
 `;

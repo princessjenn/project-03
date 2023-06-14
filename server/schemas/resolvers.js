@@ -54,18 +54,15 @@ const resolvers = {
 
       return { token, user };
     },
-    addAppointment: async (
-      parent,
-      { barberName, specialty, date, time },
-      context
-    ) => {
+    addAppointment: async (parent, { barberName, date, time }, context) => {
       if (context.user) {
         const appointment = await Appointment.create({
+          userId: context.user._id,
+          username: context.user.username,
           barberName,
           specialty,
           date,
           time,
-          specialty: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -77,6 +74,25 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+
+    addAvailability: async (parent, { date, time }, context) => {
+      if (context.user) {
+        const availability = { date, time };
+        let user = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { availability } }
+        );
+        console.log(user);
+
+        // findOneAndUpdate by user
+        // objects into user w/
+        // $addtoset pull to ste
+
+        return user;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
     removeAppointment: async (parent, { appointmentId }, context) => {
       if (context.user) {
         const appointment = await Appointment.findOneAndDelete({
