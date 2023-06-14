@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -6,38 +6,49 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      appointments {
         _id
-        thoughtText
-        createdAt
+        appointments {
+          userId
+          username
+          barberId
+          barberName
+          specialty
+          date
+          time
+        }
       }
     }
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_APPOINTMENTS = gql`
+  query appointments {
+    appointments {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
+      appointments
+      userId
+      username
+      barberId
+      barberName
+      specialty
+      date
+      time
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+export const QUERY_SINGLE_APPOINTMENT = gql`
+  query appointment($appointmentId: ID!) {
+    appointment(appointmentId: $appointmentId) {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
+      userId
+      username
+      barberId
+      barberName
+      specialty
+      date
+      time
       }
     }
   }
@@ -49,11 +60,13 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      appointments {
         _id
-        thoughtText
-        thoughtAuthor
-        createdAt
+        barberId
+        barberName
+        specialty
+        date
+        time
       }
     }
   }
