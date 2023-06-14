@@ -54,13 +54,9 @@ const resolvers = {
 
       return { token, user };
     },
-    addAppointment: async (
-      parent,
-      { barberName, specialty, date, time },
-      context
-    ) => {
+    addAppointment: async (parent, { barberName, date, time }, context) => {
       if (context.user) {
-        console.log(context.user)
+        console.log(context.user);
         let newAppt = {
           userId: context.user._id,
           username: context.user.username,
@@ -68,37 +64,66 @@ const resolvers = {
           specialty,
           date,
           time,
-        }
-        console.log(newAppt)
+        };
+        console.log(newAppt);
 
         const appointment = await Appointment.create(newAppt);
         let userUpdate = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { appointments: appointment._id } }
         );
-        console.log("userUpdate: " + userUpdate)
+        console.log("userUpdate: " + userUpdate);
         return appointment;
 
         // console.log(appointment)
-
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    removeAppointment: async (parent, { appointmentId }, context) => {
 
+    addAvailability: async (parent, { date, time }, context) => {
+      if (context.user) {
+        const availability = { date, time };
+        let user = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { availability } }
+        );
+        console.log(user);
+
+        // findOneAndUpdate by user
+        // objects into user w/
+        // $addtoset pull to ste
+
+        return user;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
+    // addSpecialty: async (parent, { }, context) => {
+    //   if (context.user) {
+    //     const specialty =
+    //       let user = await user.findOneAndUpdate(
+    //         { _id: context.user._id },
+    //         {
+    //           $addToSet: {}
+    //         });
+    //     console.log(user);
+    //     return user;
+    //   } throw new AuthenticationError("You need to be logged in!");
+    // },
+
+    removeAppointment: async (parent, { appointmentId }, context) => {
       if (context.user.isAdmin) {
-        console.log("should be an admin")
+        console.log("should be an admin");
         const appointment = await Appointment.findOneAndDelete({
           _id: appointmentId,
           // barberName: context.user.username,
         });
-        console.log(appointment)
+        console.log(appointment);
         await User.findOneAndUpdate(
           { username: appointment.username },
           { $pull: { appointments: appointment._id } }
         );
         return appointment;
-
       }
 
       // a user can only have 1 appt booked at a time so it makes sense to just remove 1 appt

@@ -45,8 +45,7 @@ const userSchema = new Schema({
   availability: [
     {
       date: { type: String },
-      startTime: { type: String },
-      endTime: { type: String },
+      time: { type: String },
     },
   ],
 });
