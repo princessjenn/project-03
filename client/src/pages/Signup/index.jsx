@@ -128,14 +128,13 @@ const Signup = () => {
                   <div className="flex flex-col mt-4 lg:space-y-2">
                     <select
                       className="select select-accent w-full max-w-xs"
+                      name="isAdmin"
                       onChange={handleAdminSelect}
                       value={formState.isAdmin ? "Admin" : "User"}
                     >
-                      <option disabled selected>
-                        Account type
-                      </option>
-                      <option>Admin</option>
-                      <option>User</option>
+                      <option disabled>Account type</option>
+                      <option value="Admin">Admin</option>
+                      <option value="User">User</option>
                     </select>
                     <button
                       type="submit"
