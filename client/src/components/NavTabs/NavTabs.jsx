@@ -7,7 +7,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           <a
             href="#home"
             onClick={() => handlePageChange('Home')}
-            //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
+           
   
             className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
           >
@@ -28,8 +28,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           <a
             href="#services"
             onClick={() => handlePageChange('Services')}
-            //  TODO: Add a comment explaining what this logic is doing
-  
+          
             className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'}
           >
             Services
@@ -51,4 +50,4 @@ function NavTabs({ currentPage, handlePageChange }) {
   
 
 
-export default NavTabs
+export default NavTabs;
