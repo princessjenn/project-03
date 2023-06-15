@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_APPOINTMENT = gql`
-  mutation addAppointment($username: String!, $barberName: String!, time: String!) {
+  mutation addAppointment($username: String!, $barberName: String!, $time: String!) {
     addAppointment(username: $username, barberName: $barberName) {
       _id
       username
@@ -35,7 +35,7 @@ export const ADD_APPOINTMENT = gql`
       time
       }
     }
-  }
+  
 `;
 
 export const DELETE_APPOINTMENT = gql`
@@ -45,5 +45,5 @@ export const DELETE_APPOINTMENT = gql`
       username
       }
     }
-  }
+  
 `;
