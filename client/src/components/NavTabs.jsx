@@ -1,4 +1,4 @@
 import React from 'react';
 
 
-export default NavTabs;
+export default NavTabs
