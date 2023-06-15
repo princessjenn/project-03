@@ -69,6 +69,14 @@ function App() {
                 element={<Profile />}
               />
               <Route 
+                path="/barbers/" 
+                element={<Barbers />}
+              />
+              <Route 
+                path="/services/" 
+                element={<Services />}
+              />
+              <Route 
                 path="/contact/" 
                 element={<Contact />}
               />
