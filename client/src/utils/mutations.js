@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -13,8 +13,18 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addUser(
+    $username: String!
+    $email: String!
+    $password: String!
+    $isAdmin: Boolean!
+  ) {
+    addUser(
+      username: $username
+      email: $email
+      password: $password
+      isAdmin: $isAdmin
+    ) {
       token
       user {
         _id
@@ -25,7 +35,11 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_APPOINTMENT = gql`
-  mutation addAppointment($username: String!, $barberName: String!, $time: String!) {
+  mutation addAppointment(
+    $username: String!
+    $barberName: String!
+    $time: String!
+  ) {
     addAppointment(username: $username, barberName: $barberName) {
       _id
       username
@@ -33,9 +47,8 @@ export const ADD_APPOINTMENT = gql`
       specialty
       date
       time
-      }
     }
-  
+  }
 `;
 
 export const DELETE_APPOINTMENT = gql`
@@ -43,7 +56,6 @@ export const DELETE_APPOINTMENT = gql`
     deleteAppointment(appointmentId: $appointmentId) {
       _id
       username
-      }
     }
-  
+  }
 `;
