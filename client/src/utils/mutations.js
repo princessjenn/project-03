@@ -14,12 +14,14 @@ export const LOGIN_USER = gql`
 
 export const ADD_USER = gql`
   mutation addUser(
+    $name: String!
     $username: String!
     $email: String!
     $password: String!
     $isAdmin: Boolean!
   ) {
     addUser(
+      name: $name
       username: $username
       email: $email
       password: $password
