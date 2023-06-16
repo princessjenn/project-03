@@ -37,7 +37,7 @@ const typeDefs = gql`
     username: String!
     barberId: ID
     barberName: String
-    specialty: String!
+    #specialty: String!
     date: String!
     time: String!
   }
@@ -66,7 +66,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addAppointment(
       barberName: String!
-      specialty: String!
+      #specialty: String!
       date: String!
       time: String!
     ): Appointment
