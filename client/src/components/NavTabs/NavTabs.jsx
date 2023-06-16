@@ -1,53 +1,43 @@
 import React from 'react';
 
 function NavTabs({ currentPage, handlePageChange }) {
-    return (
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <a
-            href="#home"
-            onClick={() => handlePageChange('Home')}
-           
-  
-            className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-          >
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#barbers"
-            onClick={() => handlePageChange('Barbers')}
-
-            className={currentPage === 'Barbers' ? 'nav-link active' : 'nav-link'}
-          >
-            Our Barbers
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#services"
-            onClick={() => handlePageChange('Services')}
-          
-            className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'}
-          >
-            Services
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#contact"
-  
-            onClick={() => handlePageChange('Contact')}
-            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    );
-  }
-  
+  return (
+    <ul className="menu menu-horizontal px-1">
+      <li>
+        <a
+          onClick={() => handlePageChange('HomePage')}
+          className={currentPage === 'HomePage' ? 'active' : ''}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => handlePageChange('Barbers')}
+          className={currentPage === 'Barbers' ? 'active' : ''}
+        >
+          Our Barbers
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => handlePageChange('Services')}
+          className={currentPage === 'Services' ? 'active' : ''}
+        >
+          Services
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => handlePageChange('Contact')}
+          className={currentPage === 'Contact' ? 'active' : ''}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  );
+}
 
 
 export default NavTabs;
