@@ -61,7 +61,6 @@ const resolvers = {
           userId: context.user._id,
           username: context.user.username,
           barberName,
-          specialty,
           date,
           time,
         };
