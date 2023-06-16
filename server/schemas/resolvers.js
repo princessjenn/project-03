@@ -55,6 +55,30 @@ const resolvers = {
       return { token, user };
     },
     addAppointment: async (parent, { barberName, date, time }, context) => {
+      if (context.user.isAdmin) {
+        console.log(context.user);
+        let newAppt = {
+          userId: context.user._id,
+          username: context.user.username,
+          barberName,
+          specialty,
+          date,
+          time,
+        };
+        console.log(newAppt);
+
+        const appointment = await Appointment.create(newAppt);
+        let userUpdate = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { appointments: appointment._id } }
+        );
+        console.log("userUpdate: " + userUpdate);
+        return appointment;
+
+        // console.log(appointment)
+      }
+      throw new AuthenticationError("You need to be logged in!");
+
       if (context.user) {
         console.log(context.user);
         let newAppt = {
