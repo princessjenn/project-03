@@ -1,43 +1,49 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs({ currentPage }) {
+  const navigate = useNavigate();
+
+  const handlePageChange = (page) => {
+    navigate(page);
+  };
+
   return (
     <ul className="menu menu-horizontal px-1">
       <li>
-        <a
-          onClick={() => handlePageChange('HomePage')}
+        <button
+          onClick={() => handlePageChange('/')}
           className={currentPage === 'HomePage' ? 'active' : ''}
         >
           Home
-        </a>
+        </button>
       </li>
       <li>
-        <a
-          onClick={() => handlePageChange('Barbers')}
+        <button
+          onClick={() => handlePageChange('/barbers')}
           className={currentPage === 'Barbers' ? 'active' : ''}
         >
           Our Barbers
-        </a>
+        </button>
       </li>
       <li>
-        <a
-          onClick={() => handlePageChange('Services')}
+        <button
+          onClick={() => handlePageChange('/services')}
           className={currentPage === 'Services' ? 'active' : ''}
         >
           Services
-        </a>
+        </button>
       </li>
       <li>
-        <a
-          onClick={() => handlePageChange('Contact')}
+        <button
+          onClick={() => handlePageChange('/contact')}
           className={currentPage === 'Contact' ? 'active' : ''}
         >
           Contact
-        </a>
+        </button>
       </li>
     </ul>
   );
 }
-
 
 export default NavTabs;
