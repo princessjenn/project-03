@@ -13,7 +13,7 @@ const Signup = () => {
     isAdmin: true,
   });
 
-  const [addUser, { error }] = useMutation(ADD_USER);
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -22,12 +22,12 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
-
+      console.log("DATA", data)
       const newUser = data.addUser.user;
       console.log("New user:", newUser);
 
