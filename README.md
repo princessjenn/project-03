@@ -8,6 +8,7 @@
 
 ## *Description*
 
+
 A scalable, collaborative, user-focused MERN-stack single-page barbershop application. Building this project we combined a MongoDB back end, a GraphQL API, an Express.js/ Node.js server with a React front end, while implementing user authentication with JWT to build a user-focused platform.
 
 **User Story:**
