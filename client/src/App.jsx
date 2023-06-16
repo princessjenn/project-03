@@ -4,7 +4,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import NavTabs from "./components/NavTabs/NavTabs";
+import NavTabs from "./components/NavTabs/NavTabs.jsx";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
