@@ -13,7 +13,7 @@ db.once("open", async () => {
 
     const createdUsers = await User.create(userSeeds);
     const createdSpecialties = await Specialty.create(specialtySeeds);
-    // const createdBarbers = await Barber.create(barberSeeds);
+    const createdBarbers = await Barber.create(barberSeeds);
 
     for (let i = 0; i < appointmentSeeds.length; i++) {
       const {
@@ -28,9 +28,9 @@ db.once("open", async () => {
       } = appointmentSeeds[i];
 
       const user = createdUsers.find((user) => user.id === userId);
-      // const barber = createdBarbers.find(
-      //   (barber) => barber.userId === barberId
-      // );
+      const barber = createdBarbers.find(
+        (barber) => barber.userId === barberId
+      );
       const specialtyObj = createdSpecialties.find(
         (spec) => spec.name === specialty
       );
@@ -40,6 +40,7 @@ db.once("open", async () => {
           id,
           user: user._id,
           userName,
+          barber: barber._id,
           barberName,
           specialty: specialtyObj._id,
           date,
