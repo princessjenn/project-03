@@ -1,6 +1,7 @@
 [
   {
       "id": "1",
+      "username": "anthonyhair",
       "name": "Anthony Banks",
       "email": "anthonybrown@example.com",
       "password": "anthony1",
@@ -8,6 +9,7 @@
     },
     {
       "id": "2",
+      "username": "davidhair",
       "name": "David Smith",
       "email": "davidsmith@example.com",
       "password": "david1",
@@ -15,6 +17,7 @@
     },
   {   
     "id": "3",
+    "username": "jameshair",
     "name": "James Miller",
     "email": "jamesmiller@example.com",
     "password": "james1",
@@ -22,6 +25,7 @@
   },
   {
     "id": "4",
+    "username": "benjaminhair",
     "name": "Benjamin Davis",
     "email": "benjamindavis@example.com",
     "password": "benjamin1",
@@ -29,6 +33,7 @@
   },
   {
     "id": "5",
+    "username": "danielhair",
     "name": "Daniel Thompson",
     "email": "danielthompson@example.com",
     "password": "daniel1",
@@ -36,6 +41,7 @@
   },
   {
     "id": "6",
+    "username": "christopherhair",
     "name": "Christopher Wilson",
     "email": "christopherwilson@example.com",
     "password": "christopher1",
@@ -43,6 +49,7 @@
   },
   {
     "id": "7",
+    "username": "michaelhair",
     "name": "Michael Jones",
     "email": "mikejones@example.com",
     "password": "michael1",
@@ -50,6 +57,7 @@
   },
   {
     "id": "8",
+    "username": "larryhair",
     "name": "Larry Fisherman",
     "email": "larryfisherman@example.com",
     "password": "larry1",

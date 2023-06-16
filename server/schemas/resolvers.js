@@ -77,8 +77,6 @@ const resolvers = {
 
         // console.log(appointment)
       }
-      throw new AuthenticationError("You need to be logged in!");
-
       if (context.user) {
         console.log(context.user);
         let newAppt = {
