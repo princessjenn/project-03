@@ -1,18 +1,19 @@
 const db = require("../config/connection");
-const { User, Specialty, Appointment } = require("../models");
+const { User,  Appointment } = require("../models");
+//Specialty,
 const userSeeds = require("./userSeeds.json");
 const barberSeeds = require("./barberSeeds.json");
-const specialtySeeds = require("./specialtySeeds.json");
+//const specialtySeeds = require("./specialtySeeds.json");
 const appointmentSeeds = require("./appointmentSeeds.json");
 
 db.once("open", async () => {
   try {
     await Appointment.deleteMany({});
-    await Specialty.deleteMany({});
+    //await Specialty.deleteMany({});
     await User.deleteMany({});
 
     const createdUsers = await User.create(userSeeds);
-    const createdSpecialties = await Specialty.create(specialtySeeds);
+    //const createdSpecialties = await Specialty.create(specialtySeeds);
     // const createdBarbers = await Barber.create(barberSeeds);
 
     for (let i = 0; i < appointmentSeeds.length; i++) {
@@ -22,7 +23,7 @@ db.once("open", async () => {
         userName,
         barberId,
         barberName,
-        specialty,
+        //specialty,
         date,
         time,
       } = appointmentSeeds[i];
@@ -31,17 +32,18 @@ db.once("open", async () => {
       // const barber = createdBarbers.find(
       //   (barber) => barber.userId === barberId
       // );
-      const specialtyObj = createdSpecialties.find(
-        (spec) => spec.name === specialty
-      );
+      //const specialtyObj = createdSpecialties.find(
+       // (spec) => spec.name === specialty
+      //);
 
-      if (user && specialtyObj) {
+      if (user ) {
+        //specialtyObj
         await Appointment.create({
           id,
           user: user._id,
           userName,
           barberName,
-          specialty: specialtyObj._id,
+          //specialty: specialtyObj._id,
           date,
           time,
         });

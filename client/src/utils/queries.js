@@ -20,7 +20,7 @@ export const QUERY_APPOINTMENTS = gql`
       username
       barberId
       barberName
-      specialty
+      #specialty
       date
       time
     }
@@ -35,7 +35,7 @@ export const QUERY_SINGLE_APPOINTMENT = gql`
       username
       barberId
       barberName
-      specialty
+      #specialty
       date
       time
       }
@@ -53,7 +53,7 @@ export const QUERY_ME = gql`
         _id
         barberId
         barberName
-        specialty
+        #specialty
         date
         time
       }
