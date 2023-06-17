@@ -5,7 +5,7 @@
       "username": "James Miller",
       "barberId": "1",
       "barberName": "Anthony Banks",
-      "specialty": "Classic Haircut",
+ 
       "date": "2023-06-26",
       "time": "10:00 AM"
     },
@@ -15,7 +15,7 @@
       "username": "Benjamin Davis",
       "barberId": "2",
       "barberName": "David Smith",
-      "specialty": "Straight Razor Shave",
+
       "date": "2023-06-27",
       "time": "02:30 PM"
     },
@@ -25,7 +25,7 @@
       "username": "Daniel Thompson",
       "barberId": "1",
       "barberName": "Anthony Banks",
-      "specialty": "Beard Trim and Shaping",
+     
       "date": "2023-06-28",
       "time": "11:15 AM"
     },
@@ -35,28 +35,28 @@
       "username": "Christopher Wilson",
       "barberId": "2",
       "barberName": "David Smith",
-      "specialty": "Skin Fade",
+    
       "date": "2023-06-29",
       "time": "04:45 PM"
     },
     {
       "id": "5",
       "userId": "7",
-      "username": "Dane Edwards",
+      "username": "Michael Jones",
       "barberId": "1",
       "barberName": "Anthony Banks",
-      "specialty": "The Smooth Operator",
+     
       "date": "2023-06-30",
       "time": "09:30 AM"
     },
     {
       "id": "6",
       "userId": "8",
-      "username": "Andrew Layendecker",
+      "username": "Larry Fisherman",
       "barberId": "2",
       "barberName": "David Smith",
-      "specialty": "Classic Haircut",
+    
       "date": "2023-07-01",
       "time": "06:00 PM"
     }
-  ]
+  ] 

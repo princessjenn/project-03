@@ -13,23 +13,23 @@ const typeDefs = gql`
     password: String
     isAdmin: Boolean
     appointments: [Appointment]
-    specialties: [Specialty]
+    #specialties: [Specialty]
     availability: [Availability]
   }
 
   type Barber {
     _id: ID
     name: String
-    specialties: String
+    #specialties: String
     availability: [String]
   }
 
-  type Specialty {
-    _id: ID
-    name: String
-    description: String
-    price: Int
-  }
+  #type Specialty {
+    #_id: ID
+    #name: String
+    #description: String
+    #price: Int
+  #}
 
   type Appointment {
     _id: ID

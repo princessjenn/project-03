@@ -46,7 +46,7 @@ export const ADD_APPOINTMENT = gql`
       _id
       username
       barberName
-      specialty
+      #specialty
       date
       time
     }
