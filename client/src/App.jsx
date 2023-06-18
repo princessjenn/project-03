@@ -42,9 +42,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+      <div className="justify-center min-100-vh">
           <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-          <div className="container">
+          <div className="container flex justify-center">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/signup" element={<Signup />} />
