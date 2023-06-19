@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "google-map-react": "^2.2.1"
+    "google-map-react": "^2.2.1",
+    "stripe": "^12.9.0"
   }
 }
