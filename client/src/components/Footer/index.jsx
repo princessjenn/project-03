@@ -5,13 +5,10 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container text-center mb-5">
+    <footer className="footer footer-center p-4 bg-transparent text-base-content">
+      <div className="container text-center text-secondary mb-5">
         {location.pathname !== '/' && (
-          <button
-            className="btn btn-dark mb-3"
-            onClick={() => navigate(-1)}
-          >
+          <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
             &larr; Go Back
           </button>
         )}
@@ -25,8 +22,14 @@ const Footer = () => {
           >
             ❤️
           </span>{' '}
-          by the Tech Thoughts team.
+          by the Fade Brigade Web Dev Team: 
         </h4>
+        <div>Jennifer Eckenrode | Thomas Johnson | Benjamin Richardson</div>
+        <div>
+          <p>
+            Copyright © 2023
+          </p>
+        </div>
       </div>
     </footer>
   );

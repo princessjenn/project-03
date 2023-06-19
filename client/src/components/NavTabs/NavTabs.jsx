@@ -59,16 +59,16 @@ export default function NavTabs({ currentPage }) {
               <Link className="btn btn-lg btn-info m-2" to="/profile">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={handleLogout}>
+              <button className="btn btn-sm btn-accent m-2" onClick={handleLogout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="btn btn-sm btn-accent m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-sm btn-accent m-2" to="/signup">
                 Signup
               </Link>
             </>
