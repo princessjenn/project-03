@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import barbershopBgImage from "/../public/assets/pexels-rdne-stock-project-7697712.jpg";
+import barbershopBgImage from "../../../public/Assets/pexels-rdne-stock-project-7697712.jpg";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -49,16 +49,19 @@ export default function HomePage() {
               <h2>
                 {" "}
                 Take the first step towards a fresh and stylish haircut by
-                signing up today to reserve your spot. <br></br> <br></br>Our top-tier
-                barbers are ready to provide you with the highest-quality
-                barbershop experience in the metroplex. Don't miss out on the
-                opportunity to elevate your grooming game <br></br> <br></br>Sign Up to become a part of the Brigade!
+                signing up today to reserve your spot. <br></br> <br></br>Our
+                top-tier barbers are ready to provide you with the
+                highest-quality barbershop experience in the metroplex. Don't
+                miss out on the opportunity to elevate your grooming game{" "}
+                <br></br> <br></br>Sign Up to become a part of the Brigade!
               </h2>
             </div>
           </div>
-<button className="btn btn-primary" onClick={handleSignupClick}>Create an Account</button>
-        </div>
+          <button className="btn btn-primary" onClick={handleSignupClick}>
+            Create an Account
+          </button>
         </div>
       </div>
+    </div>
   );
 }
