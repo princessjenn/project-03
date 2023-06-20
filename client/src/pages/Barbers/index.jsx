@@ -40,11 +40,15 @@ export default function Barbers() {
               </p>
               <div className="flex">
                 <span className="px-5">
-                  <FaInstagram size="25px"></FaInstagram>
+                  <a href="https://www.instagram.com">
+                    <FaInstagram size="25px"></FaInstagram>
+                  </a>
                 </span>
                 <span>
-                  {" "}
-                  <BsTwitter size="25px"></BsTwitter>
+                  <a href="https://www.twitter.com">
+                    {" "}
+                    <BsTwitter size="25px"></BsTwitter>
+                  </a>
                 </span>
               </div>
             </div>
@@ -79,11 +83,15 @@ export default function Barbers() {
               </p>
               <div className="flex">
                 <span className="px-5">
-                  <FaInstagram size="25px"></FaInstagram>
+                  <a href="https://www.instagram.com">
+                    <FaInstagram size="25px"></FaInstagram>
+                  </a>
                 </span>
                 <span>
-                  {" "}
-                  <BsTwitter size="25px"></BsTwitter>
+                  <a href="https://www.twitter.com">
+                    {" "}
+                    <BsTwitter size="25px"></BsTwitter>
+                  </a>
                 </span>
               </div>
             </div>
