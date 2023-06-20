@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import specialtySeeds from '../../../../server/seeders/specialtySeeds.json';
+import Auth from "../../utils/auth"; 
 
 const Services = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -15,8 +16,13 @@ const Services = () => {
     }
   };
 
+
   const handleAddToCart = (service) => {
-    addToCart(service);
+    if (Auth.loggedIn()) {
+      addToCart(service);
+    } else {
+      alert("You must be logged in to add items to the cart."); // Display the message
+    }
   };
 
   return (
