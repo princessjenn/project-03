@@ -42,7 +42,7 @@ export default function NavTabs({ currentPage }) {
   };
 
   const specialtyCount = cart.items.reduce(
-    (sum, specialty) => sum + specialty.quantity,
+    (sum, specialty) => sum + (specialty.quantity || 0), // Ensure a valid quantity is used
     0
   );
 
