@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import NavTabs from "./components/NavTabs/NavTabs.jsx";
@@ -12,6 +12,9 @@ import Barbers from "./pages/Barbers";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import Modal from "./components/NavTabs/Modal";
+import Cart from "./pages/Cart";
+import { CartProvider } from './contexts/CartContext';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -33,7 +36,8 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [currentPage, setCurrentPage] = React.useState("HomePage");
+  const [currentPage, setCurrentPage] = useState("HomePage");
+  const [showCart, setShowCart] = useState(false);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -41,23 +45,27 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Router>
-      <div className="justify-center min-100-vh">
-          <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-          <div className="container flex justify-center">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/barbers" element={<Barbers />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+      <CartProvider>
+        <Router>
+          <div className="justify-center min-100-vh">
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+            <div className="container flex justify-center">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/barbers" element={<Barbers />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/cart" element={<Cart/>} />
+                <Route path="/cart" element={<Modal/>} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </Router>
+        </Router>
+      </CartProvider>
     </ApolloProvider>
   );
 }

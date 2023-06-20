@@ -93,7 +93,9 @@ export default function Barbers() {
       </div>
       <div className="container mx-auto mt-8">
         <div className="flex justify-center">
-          <button className="btn btn-primary">Book Now!</button>
+          <Link to="/cart">
+            <button className="btn btn-primary">Book Now!</button>
+          </Link>
         </div>
       </div>
     </div>
