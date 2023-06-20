@@ -11,7 +11,10 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="/public/Assets/pexels-thgusstavo-santana-2035227.jpg"
+                src={
+                  process.env.PUBLIC_URL +
+                  "/public/Assets/pexels-thgusstavo-santana-2035227.jpg"
+                }
                 alt="Anthony Banks"
                 className="rounded-xl"
               />
