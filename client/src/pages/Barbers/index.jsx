@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { FaInstagram } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
 
 export default function Barbers() {
   return (
@@ -9,7 +10,7 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="../../../../public/assets/pexels-janik-butz-2776124.jpg"
+                src="../../../public/Assets/pexels-thgusstavo-santana-2035227.jpg"
                 alt="Anthony Banks"
                 className="rounded-xl"
               />
@@ -34,6 +35,15 @@ export default function Barbers() {
                 looking for a classic clean cut or a modern style, Anthony's
                 expert hands will leave you feeling confident and looking sharp.
               </p>
+              <div className="flex">
+                <span className="px-5">
+                  <FaInstagram size="25px"></FaInstagram>
+                </span>
+                <span>
+                  {" "}
+                  <BsTwitter size="25px"></BsTwitter>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +52,7 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="../../../../public/assets/pexels-janik-butz-2776124.jpg"
+                src="../../../public/Assets/pexels-thgusstavo-santana-1836983.jpg"
                 alt="David Smith"
                 className="rounded-xl"
               />
@@ -68,6 +78,15 @@ export default function Barbers() {
                 work his magic, leaving you with a hairstyle that reflects your
                 personality and boosts your confidence.
               </p>
+              <div className="flex">
+                <span className="px-5">
+                  <FaInstagram size="25px"></FaInstagram>
+                </span>
+                <span>
+                  {" "}
+                  <BsTwitter size="25px"></BsTwitter>
+                </span>
+              </div>
             </div>
           </div>
         </div>
