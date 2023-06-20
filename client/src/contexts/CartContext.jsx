@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 
 export const CartContext = React.createContext();
-{auth.loggedIn ? (
-  <button onClick={addToCart}>Add to Cart</button>
-) : (
-  <Link to="/login">Login to Add to Cart</Link>
-)}
 
 export const CartProvider = ({ children }) => {
   const [specialties, setSpecialties] = useState([]);

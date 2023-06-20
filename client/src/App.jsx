@@ -12,9 +12,9 @@ import Barbers from "./pages/Barbers";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import Modal from "./components/NavTabs/Modal";
 import Cart from "./pages/Cart";
 import { CartProvider } from './contexts/CartContext';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -45,11 +45,12 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
+      <AuthContextProvider>
       <CartProvider>
         <Router>
-          <div className="justify-center min-100-vh">
+          <div className="flex-column justify-flex-start min-100-vh">
             <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-            <div className="container flex justify-center">
+            <div className="container">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/signup" element={<Signup />} />
@@ -59,13 +60,14 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/cart" element={<Cart/>} />
-                <Route path="/cart" element={<Modal/>} />
               </Routes>
             </div>
             <Footer />
           </div>
         </Router>
+
       </CartProvider>
+     </AuthContextProvider>
     </ApolloProvider>
   );
 }
