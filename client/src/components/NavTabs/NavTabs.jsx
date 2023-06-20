@@ -4,7 +4,6 @@ import { CartContext } from "../../contexts/CartContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Modal from "./Modal"
 
 export default function NavTabs({ currentPage }) {
   const location = useLocation();
@@ -109,11 +108,10 @@ export default function NavTabs({ currentPage }) {
             </>
           )}
         </div>
-        <button onClick={handleShow} className="btn btn-primary">
+        <h1 className="text-primary">
             Cart ({specialtyCount} Items)
-          </button>
+          </h1>
       </header>
-      <Modal show={show} onHide={handleClose}></Modal>
     </div>
   );
 }
