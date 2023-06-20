@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../contexts/CartContext';
 import specialtySeeds from '../../../../server/seeders/specialtySeeds.json';
 
 const Services = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
+  const { addToCart } = useContext(CartContext);
 
   const handleAccordionClick = (index) => {
     if (expandedIndex === index) {
@@ -10,6 +13,10 @@ const Services = () => {
     } else {
       setExpandedIndex(index); // Expand the clicked accordion item
     }
+  };
+
+  const handleAddToCart = (service) => {
+    addToCart(service);
   };
 
   return (
@@ -28,6 +35,7 @@ const Services = () => {
           <div className="collapse-content">
             <p className="text-primary">{specialty.description}</p>
             <p className= "text-success">Price: ${specialty.price.toFixed(2)}</p>
+            <Link to="/cart" onClick={() => handleAddToCart(specialty)}>Add to Cart</Link>
           </div>
         </div>
       ))}

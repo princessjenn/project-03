@@ -21,6 +21,7 @@
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^7.0.2",
+    "react-router-dom": "^6.12.0",
     "stripe": "^12.9.0"
   },
   "devDependencies": {
