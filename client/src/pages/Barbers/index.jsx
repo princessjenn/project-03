@@ -35,6 +35,15 @@ export default function Barbers() {
                 looking for a classic clean cut or a modern style, Anthony's
                 expert hands will leave you feeling confident and looking sharp.
               </p>
+              <div className="flex">
+                <span className="px-5">
+                  <FaInstagram size="25px"></FaInstagram>
+                </span>
+                <span>
+                  {" "}
+                  <BsTwitter size="25px"></BsTwitter>
+                </span>
+              </div>
             </div>
           </div>
         </div>
