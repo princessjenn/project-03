@@ -4,7 +4,7 @@ import specialtySeeds from '../../../../server/seeders/specialtySeeds.json';
 import { CartContext } from '../../contexts/CartContext';
 
 const Cart = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const { items } = useContext(CartContext);
 
   // Calculate the total price dynamically
