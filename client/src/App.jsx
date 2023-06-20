@@ -1,4 +1,6 @@
 import React from "react";
+import Payment from "./Payment";
+import Completion from "./Completion";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
@@ -53,6 +55,8 @@ function App() {
               <Route path="/barbers" element={<Barbers />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/payment" element={<Payment />} />
+          <Route path="/completion" element={<Completion />} />
             </Routes>
           </div>
           <Footer />

@@ -1,5 +1,5 @@
 {
-  "name": "solved-vite",
+  "name": "the-fade-brigade",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.8",
+    "@stripe/react-stripe-js": "^2.1.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
