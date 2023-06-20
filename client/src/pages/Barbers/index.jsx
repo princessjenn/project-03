@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
+import barberPic1 from "../../../public/Assets/pexels-thgusstavo-santana-2035227.jpg";
+import barberPic2 from "../../../public/Assets/pexels-thgusstavo-santana-1836983.jpg";
 
 export default function Barbers() {
   return (
@@ -11,7 +13,7 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="../../../public/Assets/pexels-thgusstavo-santana-2035227.jpg"
+                src={barberPic1}
                 alt="Anthony Banks"
                 className="rounded-xl"
               />
@@ -38,11 +40,15 @@ export default function Barbers() {
               </p>
               <div className="flex">
                 <span className="px-5">
-                  <FaInstagram size="25px"></FaInstagram>
+                  <a href="https://www.instagram.com">
+                    <FaInstagram size="25px"></FaInstagram>
+                  </a>
                 </span>
                 <span>
-                  {" "}
-                  <BsTwitter size="25px"></BsTwitter>
+                  <a href="https://www.twitter.com">
+                    {" "}
+                    <BsTwitter size="25px"></BsTwitter>
+                  </a>
                 </span>
               </div>
             </div>
@@ -52,11 +58,7 @@ export default function Barbers() {
         <div className="flex-grow">
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-              <img
-                src="../../../public/Assets/pexels-thgusstavo-santana-1836983.jpg"
-                alt="David Smith"
-                className="rounded-xl"
-              />
+              <img src={barberPic2} alt="David Smith" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title text-xl text-error font-bold">
@@ -81,11 +83,15 @@ export default function Barbers() {
               </p>
               <div className="flex">
                 <span className="px-5">
-                  <FaInstagram size="25px"></FaInstagram>
+                  <a href="https://www.instagram.com">
+                    <FaInstagram size="25px"></FaInstagram>
+                  </a>
                 </span>
                 <span>
-                  {" "}
-                  <BsTwitter size="25px"></BsTwitter>
+                  <a href="https://www.twitter.com">
+                    {" "}
+                    <BsTwitter size="25px"></BsTwitter>
+                  </a>
                 </span>
               </div>
             </div>
