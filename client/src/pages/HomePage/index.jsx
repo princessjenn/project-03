@@ -57,9 +57,7 @@ export default function HomePage() {
               </h2>
             </div>
           </div>
-          <button className="btn btn-primary" onClick={handleSignupClick}>
-            Create an Account
-          </button>
+          <button className="btn btn-primary" onClick={handleSignupClick}>Create an Account</button>
         </div>
       </div>
     </div>
