@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { AuthContextProvider } from '../../contexts/AuthContext';
 import { useLocation, useNavigate } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
@@ -46,6 +47,7 @@ export default function NavTabs({ currentPage }) {
   );
 
   return (
+    <AuthContextProvider>
     <div>
       <header className=" text-light mb-4 py-3 flex-row align-center">
         <div>
@@ -113,5 +115,6 @@ export default function NavTabs({ currentPage }) {
           </h1>
       </header>
     </div>
+      </AuthContextProvider>
   );
 }
