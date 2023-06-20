@@ -10,7 +10,7 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="../../../../public/assets/pexels-janik-butz-2776124.jpg"
+                src="../../../public/Assets/pexels-thgusstavo-santana-2035227.jpg"
                 alt="Anthony Banks"
                 className="rounded-xl"
               />
@@ -52,7 +52,7 @@ export default function Barbers() {
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="../../../../public/assets/pexels-janik-butz-2776124.jpg"
+                src="../../../public/Assets/pexels-thgusstavo-santana-1836983.jpg"
                 alt="David Smith"
                 className="rounded-xl"
               />
