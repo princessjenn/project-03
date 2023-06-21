@@ -51,6 +51,7 @@ export default function Barbers() {
                       {" "}
                       <BsTwitter size="25px"></BsTwitter>
                     </a>
+                    <br />
                   </span>
                 </div>
               </div>
