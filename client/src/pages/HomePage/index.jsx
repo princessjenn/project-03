@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="hero min-h-screen relative">
       <div
-        className="hero-background absolute inset-0 bg-cover bg-center rounded-lg"
+        className="hero-background absolute inset-0 bg-cover bg-center rounded-lg border border-primary"
         style={{ backgroundImage: `url(${barbershopBgImage})` }}
       ></div>
       <div className="hero-overlay bg-opacity-60"></div>
