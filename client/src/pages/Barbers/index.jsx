@@ -11,12 +11,12 @@ export default function Barbers() {
       <div className="flex flex-col items-center">
         <div className="flex flex-col w-full lg:flex-row">
           <div className="flex-grow">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl border border-primary">
               <figure className="px-10 pt-10">
                 <img
                   src={barberPic1}
                   alt="Anthony Banks"
-                  className="rounded-xl"
+                  className="rounded-xl "
                 />
               </figure>
               <div className="card-body items-center text-center">
@@ -59,12 +59,12 @@ export default function Barbers() {
           </div>
           <div className="divider lg:divider-horizontal"></div>
           <div className="flex-grow">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl border border-primary ">
               <figure className="px-10 pt-10">
                 <img
                   src={barberPic2}
                   alt="David Smith"
-                  className="rounded-xl"
+                  className="rounded-xl "
                 />
               </figure>
               <div className="card-body items-center text-center">

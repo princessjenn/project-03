@@ -46,8 +46,8 @@ const Login = (props) => {
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body border border-primary rounded-2xl">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-primary">
+          <div className="card-body">
             {data ? (
               <p>
                 Success! You may now head{" "}
