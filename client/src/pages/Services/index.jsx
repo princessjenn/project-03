@@ -29,7 +29,7 @@ const Services = () => {
       {specialtySeeds.map((specialty, index) => (
         <div
           key={index}
-          className="collapse collapse-plus bg-base-200 border-x border-primary"
+          className="collapse collapse-plus bg-base-200 border-y border-secondary"
         >
           <input
             type="radio"

@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200 rounded-3xl">
+    <div className="hero min-h-screen bg-base-200 rounded-3xl border border-secondary">
       <div className="hero-content flex-col lg:flex-row ">
         <div className="text-center lg:text-left ">
           <h1 className="text-5xl text-error font-bold">
