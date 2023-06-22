@@ -86,32 +86,32 @@ export default function NavTabs({ currentPage }) {
               </li>
             </ul>
           </div>
-          <div>
-            {Auth.loggedIn() ? (
-              <>
-                <Link className="btn btn-lg btn-info m-2" to="/profile">
-                  {Auth.getProfile().data.username}'s profile
-                </Link>
-                <button
-                  className="btn btn-sm btn-accent m-2"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <Link className="btn btn-sm btn-primary m-2" to="/login">
-                  Login
-                </Link>
-                <Link className="btn btn-sm btn-primary m-2" to="/signup">
-                  Signup
-                </Link>
-              </>
-            )}
-          </div>
           <h1 className="text-primary">Cart ({specialtyCount} Items)</h1>
         </header>
+        <div>
+          {Auth.loggedIn() ? (
+            <>
+              <Link className="btn btn-lg btn-primary m-2" to="/profile">
+                {Auth.getProfile().data.username}'s profile
+              </Link>
+              <button
+                className="btn btn-sm btn-secondary m-2"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="btn btn-sm btn-primary m-2" to="/login">
+                Login
+              </Link>
+              <Link className="btn btn-sm btn-primary m-2" to="/signup">
+                Signup
+              </Link>
+            </>
+          )}
+        </div>
       </div>
     </AuthContextProvider>
   );
