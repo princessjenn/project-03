@@ -53,7 +53,7 @@ function App() {
       <AuthContextProvider>
         <CartProvider>
           <Router>
-            <div className="flex justify-end border-white-500">
+            <div className="flex justify-center">
               <NavTabs
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}
