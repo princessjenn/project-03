@@ -50,7 +50,7 @@ export default function NavTabs({ currentPage }) {
   return (
     <AuthContextProvider>
       <div className="flex">
-        <header className="flex justify-start items-center text-light mb-4 py-3 px-3">
+        <header className="flex justify-start items-center text-light p-0.5">
           <div>
             <ul className="flex menu menu-horizontal px-1 py-3">
               <li>
