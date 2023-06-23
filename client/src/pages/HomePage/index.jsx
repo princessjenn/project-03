@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="hero min-h-screen relative">
       <div
-        className="hero-background absolute inset-0 bg-cover bg-center"
+        className="hero-background absolute inset-0 bg-cover bg-center rounded-lg border border-primary"
         style={{ backgroundImage: `url(${barbershopBgImage})` }}
       ></div>
       <div className="hero-overlay bg-opacity-60"></div>
@@ -21,6 +21,7 @@ export default function HomePage() {
           <h1 className="mb-5 text-5xl text-primary font-bold">
             Welcome to - <br /> The Fade Brigade
           </h1>
+          <br />
           <p className="bg-secondary bg-opacity-70 rounded-lg text-info p-8 mb-5">
             Step into a world of grooming excellence.
             <br />
@@ -39,7 +40,7 @@ export default function HomePage() {
           <button className="btn btn-primary">Book Now!</button>
         </div>
 
-        <div className="divider lg:divider-horizontal my-8"></div>
+        <div className="divider lg:divider-horizontal my-8 before:bg-primary after:bg-primary"></div>
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl text-primary font-bold">
             Excellence <br></br> in grooming awaits you!
@@ -57,7 +58,9 @@ export default function HomePage() {
               </h2>
             </div>
           </div>
-          <button className="btn btn-primary" onClick={handleSignupClick}>Create an Account</button>
+          <button className="btn btn-primary" onClick={handleSignupClick}>
+            Create an Account
+          </button>
         </div>
       </div>
     </div>

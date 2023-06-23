@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,8 +18,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
-import { CartProvider } from './contexts/CartContext';
-import { AuthContextProvider } from './contexts/AuthContext';
+import { CartProvider } from "./contexts/CartContext";
+import { AuthContextProvider } from "./contexts/AuthContext";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -46,28 +51,33 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <AuthContextProvider>
-      <CartProvider>
-        <Router>
-          <div className="flex-column justify-flex-start min-100-vh">
-            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-            <div className="container">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/barbers" element={<Barbers />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/cart" element={<Cart/>} />
-              </Routes>
+        <CartProvider>
+          <Router>
+            <div className="flex justify-center">
+              <NavTabs
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+              />
             </div>
-            <Footer />
-          </div>
-        </Router>
-
-      </CartProvider>
-     </AuthContextProvider>
+            <div className="divider lg:divider-vertical"></div>
+            <div className="flex flex-wrap justify-center">
+              <div className="container">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/barbers" element={<Barbers />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/cart" element={<Cart />} />
+                </Routes>
+              </div>
+              <Footer />
+            </div>
+          </Router>
+        </CartProvider>
+      </AuthContextProvider>
     </ApolloProvider>
   );
 }

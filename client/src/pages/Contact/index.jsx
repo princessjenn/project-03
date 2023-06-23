@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-
-
-
+import React, { useState } from "react";
 
 export default function Contact() {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [message, setMessage] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,18 +13,18 @@ export default function Contact() {
     // For example, you can send the data to an API or perform other operations
 
     // Reset the form fields
-    setFullName('');
-    setEmail('');
-    setPhoneNumber('');
-    setMessage('');
+    setFullName("");
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
-        <div className="text-center lg:text-left">
+    <div className="hero min-h-screen bg-base-200 rounded-3xl border border-secondary">
+      <div className="hero-content flex-col lg:flex-row ">
+        <div className="text-center lg:text-left ">
           <h1 className="text-5xl text-error font-bold">
-          The Fade Brigade shop <br></br>wants to hear from you!
+            The Fade Brigade shop <br></br>wants to hear from you!
           </h1>
           <br></br>
           <h1 className="text-2xl font-bold text-primary">
@@ -36,9 +33,13 @@ export default function Contact() {
             Dallas, TX 12345
           </h1>
           <br></br>
-          <h1 className="text-2xl font-bold text-primary">(555) 123-CUTZ (2889)</h1>
+          <h1 className="text-2xl font-bold text-primary">
+            (555) 123-CUTZ (2889)
+          </h1>
           <br></br>
-          <h1 className="text-2xl font-bold text-primary">grooming@TheFadeBrigade.com</h1>
+          <h1 className="text-2xl font-bold text-primary">
+            grooming@TheFadeBrigade.com
+          </h1>
           <br></br>
           <p className="py-6 text-success font-bold">Hours of Operation:</p>
           <p className="py-0 text-success">
@@ -52,7 +53,7 @@ export default function Contact() {
           </p>
         </div>
 
-         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-primary">
           <div className="card-body">
             <h1 className="text-1xl mb-4">
               Please submit this form below to leave us a message!
@@ -117,4 +118,3 @@ export default function Contact() {
     </div>
   );
 }
-

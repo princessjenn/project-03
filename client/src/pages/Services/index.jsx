@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../../contexts/CartContext';
-import specialtySeeds from '../../../../server/seeders/specialtySeeds.json';
-import Auth from "../../utils/auth"; 
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import specialtySeeds from "../../../../server/seeders/specialtySeeds.json";
+import Auth from "../../utils/auth";
 
 const Services = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -16,7 +16,6 @@ const Services = () => {
     }
   };
 
-
   const handleAddToCart = (service) => {
     if (Auth.loggedIn()) {
       addToCart(service);
@@ -28,7 +27,10 @@ const Services = () => {
   return (
     <div>
       {specialtySeeds.map((specialty, index) => (
-        <div key={index} className="collapse collapse-plus bg-base-200">
+        <div
+          key={index}
+          className="collapse collapse-plus bg-base-200 border-y border-secondary"
+        >
           <input
             type="radio"
             name="my-accordion-3"
@@ -40,8 +42,10 @@ const Services = () => {
           </div>
           <div className="collapse-content">
             <p className="text-primary">{specialty.description}</p>
-            <p className= "text-success">Price: ${specialty.price.toFixed(2)}</p>
-            <Link to="/cart" onClick={() => handleAddToCart(specialty)}>Add to Cart</Link>
+            <p className="text-success">Price: ${specialty.price.toFixed(2)}</p>
+            <Link to="/cart" onClick={() => handleAddToCart(specialty)}>
+              Add to Cart
+            </Link>
           </div>
         </div>
       ))}
