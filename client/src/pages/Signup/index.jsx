@@ -55,7 +55,7 @@ const Signup = () => {
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
         <div className="justify-center mx-auto text-left align-bottom transition-all transform bg-info rounded-lg sm:align-middle sm:max-w-2xl sm:w-full">
           <div className="grid flex-wrap items-center justify-center grid-cols-1 mx-auto shadow-xl lg:grid-cols-2 rounded-xl">
-            <div className="w-full px-6 py-3 bg-base-100 border border-secondary rounded">
+            <div className="w-full px-6 py-3 bg-base-100 border border-primary rounded">
               <div>
                 <div className="mt-3 text-left sm:mt-5">
                   <div className="inline-flex items-center w-full ">
@@ -149,7 +149,7 @@ const Signup = () => {
             </div>
             <div className="order-first hidden w-full lg:block">
               <img
-                className="object-cover h-full bg-cover rounded-l-lg border border-primary rounded"
+                className="object-cover h-full bg-cover rounded-l-lg border border-primary"
                 src={signupPic}
                 alt=""
               />
