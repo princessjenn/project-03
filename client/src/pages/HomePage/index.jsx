@@ -10,13 +10,13 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center hero min-h-screen relative">
+    <div className="hero min-h-screen relative">
       <div
         className="hero-background absolute inset-0 bg-cover bg-center rounded-lg border border-primary"
         style={{ backgroundImage: `url(${barbershopBgImage})` }}
       ></div>
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content relative">
+      <div className="flex flex-wrap justify-center hero-content text-center text-neutral-content relative">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl text-primary font-bold">
             Welcome to - <br /> The Fade Brigade

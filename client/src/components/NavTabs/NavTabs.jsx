@@ -50,9 +50,9 @@ export default function NavTabs({ currentPage }) {
   return (
     <AuthContextProvider>
       <div className="flex">
-        <header className="flex justify-start items-center text-light p-0.5">
+        <header className="flex flex-wrap justify-start items-center text-light p-0.5">
           <div>
-            <ul className="flex menu menu-horizontal px-1 py-3">
+            <ul className="flex flex-wrap menu menu-horizontal px-1 py-3">
               <li>
                 <button
                   onClick={() => handlePageChange("/")}
@@ -88,11 +88,14 @@ export default function NavTabs({ currentPage }) {
             </ul>
           </div>
           <div className="divider lg:divider-horizontal"></div>
-          <AiOutlineShoppingCart
-            size="1.25em"
-            color="primary"
-          ></AiOutlineShoppingCart>
-          <h1 className="text-primary"> Cart ({specialtyCount} Items)</h1>
+
+          <h1 className="flex text-primary">
+            <AiOutlineShoppingCart
+              size="1.25em"
+              color="primary"
+            ></AiOutlineShoppingCart>{" "}
+            Cart ({specialtyCount} Items)
+          </h1>
           <div className="divider lg:divider-horizontal"></div>
           <div className="flex items-end">
             {Auth.loggedIn() ? (
