@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import signupPic from "../../../public/Assets/pexels-rdne-stock-project-7697358.jpg";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -149,7 +150,7 @@ const Signup = () => {
             <div className="order-first hidden w-full lg:block">
               <img
                 className="object-cover h-full bg-cover rounded-l-lg border border-primary rounded"
-                src="../../../../public/assets/pexels-rdne-stock-project-7697358.jpg"
+                src={signupPic}
                 alt=""
               />
             </div>
