@@ -40,7 +40,7 @@ export default function HomePage() {
           <button className="btn btn-primary">Book Now!</button>
         </div>
 
-        <div className="divider lg:divider-horizontal my-8"></div>
+        <div className="divider lg:divider-horizontal my-8 before:bg-primary after:bg-primary"></div>
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl text-primary font-bold">
             Excellence <br></br> in grooming awaits you!

@@ -57,7 +57,7 @@ export default function Barbers() {
               </div>
             </div>
           </div>
-          <div className="divider lg:divider-horizontal"></div>
+          <div className="divider lg:divider-horizontal "></div>
           <div className="flex-grow">
             <div className="card w-96 bg-base-100 shadow-xl border border-primary ">
               <figure className="px-10 pt-10">

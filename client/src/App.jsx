@@ -59,7 +59,7 @@ function App() {
                 handlePageChange={handlePageChange}
               />
             </div>
-            <div className="divider lg:divider-vertical via-primary"></div>
+            <div className="divider lg:divider-vertical"></div>
             <div className="flex flex-wrap justify-center">
               <div className="container">
                 <Routes>
