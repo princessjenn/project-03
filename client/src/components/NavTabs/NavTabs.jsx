@@ -89,12 +89,12 @@ export default function NavTabs({ currentPage }) {
           </div>
           <div className="divider lg:divider-horizontal"></div>
 
-          <h1 className="flex text-primary">
+          <h1 className="flex text-primary mx-5">
             <AiOutlineShoppingCart
               size="1.25em"
               color="primary"
             ></AiOutlineShoppingCart>{" "}
-            Cart ({specialtyCount} Items)
+            Cart ({specialtyCount} Items){" "}
           </h1>
           <div className="divider lg:divider-horizontal"></div>
           <div className="flex items-end">
